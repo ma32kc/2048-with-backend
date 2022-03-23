@@ -1,0 +1,30 @@
+<div class="wrapper">
+    <header>
+        <div class="header__container">
+            <div class="back-btn">
+                <a class="back" href="/">Играть</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="leaderboard__container">
+            <div class="leaderboard">
+                <div class="leaderboard__title">Таблица результатов</div>
+                <ul class="leaderboard__body">
+                    <li class="leaderboard__item">
+                        <div class="leaderboard__label">Имя</div>
+                        <div class="leaderboard__label">Время</div>
+                    </li>
+                    {{#if users.length}}
+                        {{#each users}}
+                            <li class="leaderboard__item">
+                                <div class="leaderboard__label">{{username}}</div>
+                                <div class="leaderboard__label">{{time}}</div>
+                            </li>
+                        {{/each}}
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>
